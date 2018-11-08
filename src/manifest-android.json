@@ -1,0 +1,25 @@
+{
+  "short_name": "OES",
+  "name": "Online Examination System",
+  "description": "OES is website that help university to conduct online test",
+  "icons": [
+    {
+      "src": "globle/icon.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "globle/icon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "globle/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.php",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}

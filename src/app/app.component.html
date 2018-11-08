@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" routerLink="home" >Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Select User</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="admindashboard">Admin</a>
+            <a class="dropdown-item" routerLink="directordashboard">Director</a>
+            <a class="dropdown-item" routerLink="facultydashboard">Faculty</a>
+            <a class="dropdown-item" routerLink="studentdashboard">Student</a>
+        </div>
+        </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <router-outlet></router-outlet>
+</div>
+<footer class="bg-dark text-white mt-4">
+    <div class="col-md-3">Uka Tarsadia University @</div>
+</footer>

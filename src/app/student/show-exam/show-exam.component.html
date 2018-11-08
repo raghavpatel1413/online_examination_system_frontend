@@ -1,0 +1,7 @@
+<form class="form" [formGroup]="listexamform" (ngSubmit)="onSubmit()">
+  <h1 class="display-4">List Exam</h1>
+  <table class='table table-responsive-sm table-striped table-bordered table-hover'>
+    <tr><th>Exam Name</th><th>Subject</th><th>Date of start</th><th>Start time</th><th>Total time</th><th>Total marks</th><th>Passing marks</th><th>Obtained marks</th><th>Your exam start time</th><th>Your exam end time</th><th>Action</th></tr>
+    <tr *ngFor="let o of obj"><td>pachi</td><td>{{o.subject_name}}</td><td>{{o.exam_date_start}}</td><td>{{o.exam_start_time}}</td><td>{{o.exam_total_time}}</td><td>{{o.exam_total_marks}}</td><td>{{o.exam_passing_marks}}</td><td>{{o.obtained_marks}}</td><td>{{o.s_start_time}}</td><td>{{o.s_end_time}}</td><td><input class='btn btn-outline-primary' type='submit' value='Select'></td></tr>
+  </table>
+</form>

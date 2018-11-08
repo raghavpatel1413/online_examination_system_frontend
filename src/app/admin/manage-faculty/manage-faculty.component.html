@@ -1,0 +1,67 @@
+<form class="form">
+  <h1 class="display-4">Faculty</h1>
+  <div class="row">
+      <div class="col-sm-6">
+          <div class="form-group">
+              <label for="txb_faculty_fname">Faculty First Name</label>
+              <input class="form-control" type="text" >
+          </div>
+      </div>
+      <div class="col-sm-6">
+          <div class="form-group">
+              <label for="txb_faculty_mname">Faculty Middle Name</label>
+              <input class="form-control" type="text" >
+          </div>
+      </div>
+      <div class="col-sm-6">
+          <div class="form-group">
+              <label for="txb_faculty_lname">Faculty Last Name</label>
+              <input class="form-control" type="text" >
+          </div>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="txb_faculty_email">Faculty Email</label>
+      <input class="form-control" type="text" >
+  </div>
+  <div class="form-group">
+      <label for="txb_faculty_cno">Faculty Contact No</label>
+      <input class="form-control" type="text" >
+  </div>
+  <div class="form-group">
+      <label for="faculty_gender">Faculty Gender</label>
+      <label class="radio-inline">
+          <input type="radio" id="faculty_gender" value="male" > Male 
+      </label>
+      <label class="radio-inline">
+          <input type="radio" value="female" > Female 
+      </label>
+  </div>
+  <div class="form-group">
+      <label for="faculty_dob">Faculty Date of Birth</label>
+      <input type="date" class="form-control" required>
+  </div>
+  <div class="form-group">
+      <label for="txa_faculty_address">Faculty Address</label>
+      <textarea class="form-control" rows="5" required></textarea>
+  </div>
+  <div class="form-group">
+  <label for="sel_dept">Department</label>
+      
+  </div>
+  <div class="form-group">
+  <label for="sel_cou">Course</label>
+      
+  </div>
+  <div class="form-group">
+<label for="sel_sub">Subject</label>
+    
+</div>
+  <div class="form-group">
+      <button type="submit" name="btn_add_faculty" class="btn btn-outline-primary btn-block">Add Faculty</button>
+  </div>
+  <table class='table table-responsive-sm table-striped table-bordered table-hover'>
+    <tr><th>Faculty Name</th><th>Faculty email</th><th>Action</th></tr>
+    <tr><td>{{obj.faculty_fname}}</td><td>{{obj.faculty_email}}</td><td><input class='btn btn-outline-primary' type='submit' value='Select'></td></tr>
+  </table>
+</form>

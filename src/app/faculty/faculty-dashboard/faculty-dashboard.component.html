@@ -1,0 +1,13 @@
+<h1 class="display-4">Faculty Dashboard</h1>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="jumbotron">
+            <i class="fa fa-university" aria-hidden="true"></i>
+            <?php
+                $Tempq=mysqli_query($con,"select count(department_id) from tbl_department") or die("Dashboard value getting error");
+                $row=mysqli_fetch_array($Tempq);
+            ?>
+            <h1>Total Department <?php echo "<br>".$row[0] ?></h1>
+        </div>
+    </div>
+</div>

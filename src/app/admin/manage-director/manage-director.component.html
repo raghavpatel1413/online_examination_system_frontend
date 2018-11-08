@@ -1,0 +1,42 @@
+<form class="form" [formGroup]="managedirectorform" (ngSubmit)="onSubmit()">
+  <h1 class="display-4">Director</h1>
+  <div class="form-group">
+      <label for="txb_director_name">Director Name</label>
+      <input class="form-control" type="text" formControlName="dname" required>
+  </div>
+  <div class="form-group">
+      <label for="txb_director_email">Director Email</label>
+      <input class="form-control" type="text" formControlName="demail" required>
+  </div>
+  <div class="form-group">
+      <label for="txb_director_cno">Director Contact No</label>
+      <input class="form-control" type="text" formControlName="dcontact" required>
+  </div>
+  <div class="form-group">
+      <label for="txa_director_address">Director Address</label>
+      <textarea class="form-control" rows="5" formControlName="daddress" required></textarea>
+  </div>
+  <div class="form-group">
+      <label for="director_gender">Director Gender</label>
+      <label class="radio-inline">
+          <input type="radio" value="male" formControlName="dgender" checked> Male 
+      </label>
+      <label class="radio-inline">
+          <input type="radio" value="female" formControlName="dgender"> Female 
+      </label>
+  </div>
+  <div class="form-group">
+      <label for="director_dob">Director Date of Birth</label>
+      <input type="date" class="form-control" formControlName="ddob" required>
+  </div>
+  <div class="form-group">
+  <label for="sel_dept">Director Departmet</label>
+  </div>
+  <div class="form-group">
+      <button type="submit" name="btn_add_director" class="btn btn-outline-primary btn-block">Add director</button>
+  </div>
+  <table class='table table-responsive-sm table-striped table-bordered table-hover'>
+    <tr><th>Director Name</th><th>Direcotr email</th><th>Action</th></tr>
+    <tr><td>{{obj.director_name}}</td><td>{{obj.director_email}}</td><td><input class='btn btn-outline-primary' type='submit' value='Select'></td></tr>
+  </table>
+</form>

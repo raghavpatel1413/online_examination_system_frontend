@@ -1,0 +1,24 @@
+<form class="form" [formGroup]="managedepartmentform" (ngSubmit)="onSubmit()">
+  <h1 class="display-4">Department</h1>
+  <div class="form-group">
+      <label for="txb_department_name">Department Name</label>
+      <input class="form-control" type="text" formControlName="dname" [ngClass]="{ 'is-invalid': submitted && f.dname.errors }">
+      <div *ngIf="submitted && f.dname.errors" class="invalid-feedback">
+        <div *ngIf="f.dname.errors.required">Department name is required</div>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="txa_department_details">Department Details</label>
+      <textarea class="form-control" rows="5" formControlName="ddetails" [ngClass]="{ 'is-invalid': submitted && f.ddetails.errors }"></textarea>
+      <div *ngIf="submitted && f.ddetails.errors" class="invalid-feedback">
+        <div *ngIf="f.ddetails.errors.required">Department Details is required</div>
+      </div>
+  </div>
+  <div class="form-group">
+      <button class="btn btn-outline-primary btn-block">Add Department</button>
+  </div>
+    <table class='table table-responsive-sm table-striped table-bordered table-hover'>
+      <tr><th>Department Name</th><th>Department Details</th><th>Action</th></tr>
+      <tr><td>{{obj.department_name}}</td><td>{{obj.department_details}}</td><td><input class='btn btn-outline-primary' type='submit' value='Select'></td></tr>
+    </table>
+</form>
