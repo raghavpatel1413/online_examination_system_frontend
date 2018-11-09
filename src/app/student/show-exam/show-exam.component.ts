@@ -21,6 +21,12 @@ export class ShowExamComponent implements OnInit {
   select(){
     let obs=this.studentservice.getexamlist("2");
     obs.subscribe(data=>this.obj=data);
-    obs.subscribe(data=>{console.log(data)});
+  }
+  selectexam(tempo,datestart,starttime,totaltime){
+    console.log(tempo,datestart,starttime,totaltime);
+    if(1==1)
+    {
+      
+    }
   }
 }

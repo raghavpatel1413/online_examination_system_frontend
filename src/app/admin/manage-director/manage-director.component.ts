@@ -10,6 +10,7 @@ import { AdminService } from '../../admin.service';
 export class ManageDirectorComponent implements OnInit {
   managedirectorform: FormGroup;
   public obj;
+  public deptobj;
   constructor(private formBuilder: FormBuilder, private adminservice: AdminService) { }
 
   ngOnInit() {
@@ -18,8 +19,9 @@ export class ManageDirectorComponent implements OnInit {
       demail: ['', Validators.required],
       dcontact: ['', Validators.required],
       daddress: ['', Validators.required],
-      dgender: ['', Validators.required],
+      gender: ['', Validators.required],
       ddob: ['', Validators.required],
+      deptselect:['',Validators.required]
   });
     this.select();
   }
@@ -30,10 +32,14 @@ export class ManageDirectorComponent implements OnInit {
     if (this.managedirectorform.invalid) {
       return;
     }
-    this.adminservice.insertdirector(this.f.dname.value,this.f.demail.value,this.f.dcontact.value,this.f.daddress.value,this.f.dgender.value,this.f.ddob.value);
+    this.adminservice.insertdirector(this.f.dname.value,this.f.demail.value,this.f.dcontact.value,this.f.daddress.value,this.f.gender.value,this.f.ddob.value,this.f.deptselect.value);
   }
   select(){
     let obs=this.adminservice.getdirectordata();
     obs.subscribe(data=>this.obj=data);
+    obs.subscribe(data=>{console.log(data)});
+
+    let obs2=this.adminservice.getdepartmentdata();
+    obs2.subscribe(data=>this.deptobj=data);
   }
 }

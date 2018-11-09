@@ -24,9 +24,9 @@ export class AdminService {
     return obs;
   }
 
-  insertdirector(dname: string, demail: string,dcontact: string,daddress:string,dgender:string,ddob:string){
-    let obs=this.http.get(this.api,{ params:{ operation: "adddirector",dname: dname, demail: demail } });
-    obs.subscribe((response)=>console.log(response));
+  insertdirector(dname: string, demail: string,dcontact: string,daddress:string,dgender:string,ddob:string,deptselect:string){
+    let obs=this.http.get(this.api,{ params:{ operation: "adddirector",dname: dname, demail: demail ,dcontact: dcontact, daddress: daddress, dgender: dgender, ddob: ddob, deptselect: deptselect} });
+    console.log(dname, demail,dcontact, daddress, dgender, ddob, deptselect);
     return obs;
   }
 

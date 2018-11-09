@@ -37,4 +37,8 @@ export class ManageDepartmentComponent implements OnInit {
     let obs=this.adminservice.getdepartmentdata();
     obs.subscribe(data=>this.obj=data);
   }
+  selectdepartment(deptid)
+  {
+    
+  }
 }
